@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     const streamSource = interval(1500);
     this.subscription = streamSource.subscribe((input) => {
       this.outputStreamData.push(input);
+      // step #2 + 3
       console.log('stream output', input);
     });
   }
